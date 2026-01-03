@@ -27,7 +27,7 @@ app.post("/item", (req, res) => {
   const { todo, description } = req.body;
 
   if (!todo) {
-    return res.status(400).json({ message: "Todo is required" });
+    return res.status(400).json({ message: "adding todo" });
   }
 
   const newItem = {
@@ -38,7 +38,7 @@ app.post("/item", (req, res) => {
   TODOS.push(newItem);
 
   res.json({
-    message: "Item added successfully",
+    message: "Item added successfully ",
     items: TODOS
   });
 });
